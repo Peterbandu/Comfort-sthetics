@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="pagina de prueba de cosmeticos">
+    <title>comfort esthetic</title>
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=DM+Sans:400,400i,500,500i,700,700i&amp;display=swap">
+    <link rel="stylesheet" href="estilo.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="lib/bootstrap.min.css" />
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <script defer src="stock.js"></script>
+    <script defer src="modal.js"></script>
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- barra de navegacion -->
+        <nav>
+            <div id="navbar">
+                <div class="navbar-brand">
+                    <a href="index.html" id="logo"><img src="images/logo.png"></a>
+                </div>
+                <div id="navbar-right">
+                    <a class="active" href="index.html">Inicio</a>
+                    <a href="">Nosotros</a>
+                    <a href="/productos.html">Productos</a>
+                    <a href="">Contacto</a>
+                    <a class="btn" href="registro.html">Registro</a>
+                    <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+                </div>
+                <div class="btn-wrap button-inicial"><a class="button button-secondary button-sm" href="#"><i class="fa-solid fa-magnifying-glass"></i> Busca tu producto</a></div>
+            </div>
+        </nav>
+    </header>
+    <select id="filtroTalle">
+        <option value="all">Todos</option>
+        <option value="L">Large</option>
+        <option value="M">Medium</option>
+        <option value="S">Small</option>
+    </select>
+
+
+    <main id="contenedor-productos" style="margin-top: 140px;">
+
+    </main>
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+                <!-- <div class="productoEnCarrito">
+                    <p>Buzo 1</p>
+                    <p>Precio: $1200</p>
+                    <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                </div> -->
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+        </div>
+    </div>
+
+    <footer class="section footer-classic context-dark">
+        <div class="container wide">
+            <div class="row ">
+                <div class="column-2">
+                    <div class="phone-wrap">
+                        <div class="group-md group-middle" style="display: flex">
+                            <div class="navbar-brand" id="ajuste">
+
+                                <a href="" id="logo"><img src="images/logo.png"></a>
+                            </div>
+                            <a class="phone-link" href="tel:#">58 424 -231 -52-61   </a><br/>
+                            <div class="phone-sub"> Comunicate para mas información</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="list-wrapper">
+                <!--Enlaces de interes-->
+                <div class="row">
+
+                    <div class="column" style="max-width: 300px;">
+                        <p>Accesos rapidos</p>
+                        <ul class="list">
+                            <li><a href="#" data-waypoint-to="#">Nosotros</a></li>
+                            <li><a href="/index.html" data-waypoint-to="#">Inicio</a></li>
+                            <li><a href="#" data-waypoint-to="#">Blog</a></li>
+                            <li><a href="/productos.html" data-waypoint-to="#">Productos</a></li>
+                            <li><a href="#" data-waypoint-to="#">Contactanos</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="column" style="max-width: 300px;">
+                        <p>Enlaces</p>
+                        <ul class="list">
+                            <li><a href="#" data-waypoint-to="#">Centro de ayuda</a></li>
+                            <li><a href="#" data-waypoint-to="#">FAQs</a></li>
+                            <li><a href="#" data-waypoint-to="#">productos</a></li>
+                            <li><a href="#" data-waypoint-to="#">Terminos y condiciones</a></li>
+                            <li><a href="#" data-waypoint-to="#">Politicas de privacidad</a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <!--Copyright-->
+                <div class="column" style="height: auto;">
+                    <div class="group-md group-middle">
+                        <p class="rights"><span>©&nbsp; </span><span class="copyright-year">2022</span><span>&nbsp;</span><span>Comfort Esthetics</span><span>.&nbsp;</span></p>
+                    </div>
+                </div>
+                <!--Redes sociales-->
+                <div class="col" style="margin-top: 16px;">
+                    <div class="text-lg-right">
+                        <ul class="group-xl group-middle">
+                            <li>
+                                <a class="icon" href="#"><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a class="icon" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a class="icon" href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a class="icon" href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="lib/jquery-3.2.1.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+</body>
+
+</html>

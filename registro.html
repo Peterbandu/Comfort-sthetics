@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="pagina de prueba de cosmeticos">
+        <title>comfort esthetic</title>
+        <link rel="icon" href="images/logo.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=DM+Sans:400,400i,500,500i,700,700i&amp;display=swap">
+        <link rel="stylesheet" href="estilo.css" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+<body>
+    <header>
+<!-- barra de navegacion -->
+<nav>
+    <div id="navbar">
+        <div class="navbar-brand">
+            <a href="index.html" id="logo"><img src="images/logo.png"></a>
+        </div>
+        <div id="navbar-right">
+            <a class="active" href="index.html">Inicio</a>
+            <a href="">Nosotros</a>
+            <a href="">Productos</a>
+            <a href="">Contacto</a>
+            <a class="btn" href="registro.html">Registro</a>
+        </div>
+        <div class="btn-wrap button-inicial"><a class="button button-secondary button-sm" href="#"><i class="fa-solid fa-magnifying-glass"></i> Busca tu producto</a></div>
+    </div>
+</nav>
+    </header>
+    <main>
+<!-- contenido principal de la pagina  -->
+<div class="container p-section">
+    <h2 class="text-center fw-bold">Registro</h2>
+    <div id="formulario">
+        <form action="" name="formulario" id="formulario">
+            <div class="row">
+                <div class="column" >
+                    <div class="my-2 d-flex flex-column" style="margin-top: 5px;">
+                        <label>Nombre:</label>
+                        
+                    </div>
+                    <div class="my-2 d-flex flex-column" style="margin-top: 10px">
+                        <label>Apellido:</label>
+                        
+                    </div>
+                    <div class="my-2 d-flex flex-column" style="margin-top: 8px">
+                        <label>Correo:</label>
+                        
+                    </div>
+                    <div class="my-2 d-flex flex-column" style="margin-top: 10px"> 
+                        <label>Contraseña:</label>
+                        
+                    </div>
+                    <div class="my-2 d-flex flex-column" style="margin-top: 12px;font-size: 13.5px;">
+                        <label>Confirme su contraseña:</label>
+                        
+                    </div>
+                    <div class="d-flex flex-column my-1" style="margin-top: 65px;">
+                        <label>dejanos tu comentario</label>
+                        
+                    </div>
+                    <div class="my-2" style="margin-top: 18px;">
+                        <label> terminos y condiciones</label>
+                        
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="my-2 d-flex flex-column">
+                        
+                        <input type="text" name="nombre" id="form_nombre" onblur="letramayuscula()">
+                    </div>
+                    <div class="my-2 d-flex flex-column">
+                        
+                        <input type="text" name="apellido" id="form_apellido" onblur="letramayuscula()">
+                    </div>
+                    <div class="my-2 d-flex flex-column">
+                        
+                        <input type="email" name="email" id="form_email" onblur="letramayuscula()">
+                    </div>
+                    <div class="my-2 d-flex flex-column">
+                       
+                        <input type="password" name="password" id="form_password1">
+                    </div>
+                    <div class="my-2 d-flex flex-column">
+                        
+                        <input type="password" name="password" id="form_password2" onblur="compararecontraseña()">
+                        <p id="mensajecomparacion"></p>
+                    </div>
+                    <div class="d-flex flex-column my-1" style="margin-top: 38px;">
+                        
+                        <textarea id="textarea" maxlenght="100" style="width: 100%;"></textarea>
+                        <div id="contador">0/100</div>
+                    </div>
+                    <div class="my-2">
+                       
+                        <input type="checkbox" name="" id="checkterms">
+                    </div>
+                </div>
+            </div>    
+
+           
+            <div class="my-2" style="margin-top: 20%;">
+                <input type="button" name="" id="alldelete" value="Borrar Todo" onclick="borrartodo()">
+                <input type="button" name="" id="botonsubmit" value="Aceptar" onclick="crearcookie()">
+                <span id="mensaje2"></span>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="mx-auto modal-confimacion d-none" id="modal">
+
+    <div class="modal-header">
+        <h5 class="modal-title">Confirme</h5>
+        <button type="button" class="btn-close" aria-label="Close" id="close_modal" onclick="cerrarmodal()"></button>
+    </div>
+    <hr/>
+    <div class="modal-body">
+        <span class="fw-bold">¿Está seguro que desea borrar todos los datos?</span>
+    </div>
+    <div class="modal-footer my-3">
+        <button type="button" class="btn btn-secondary mx-3" onclick="cerrarmodal()">Cancelar</button>
+        <button type="button" class="btn-pink mx-3" id="alldelete" onclick="borrartodo()">Borrar Todo</button>
+    </div>
+</div>
+
+<!--fin imagen texto-->
+    </main>
+<!-- pie de pagina -->
+<footer class="section footer-classic context-dark">
+    <div class="container wide">
+        <div class="row ">
+            <div class="column-2">
+                <div class="phone-wrap">
+                    <div class="group-md group-middle" style="display: flex">
+                        <div class="navbar-brand" id="ajuste">
+
+                            <a href="" id="logo"><img src="images/logo.png"></a>
+                        </div>
+                        <a class="phone-link" href="tel:#">58 424 -231 -52-61   </a><br/>
+                        <div class="phone-sub"> Comunicate para mas información</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="list-wrapper">
+            <!--Enlaces de interes-->
+            <div class="row">
+
+                <div class="column" style="max-width: 300px;">
+                    <p>Accesos rapidos</p>
+                    <ul class="list">
+                        <li><a href="#" data-waypoint-to="#">Nosotros</a></li>
+                        <li><a href="#" data-waypoint-to="#">Inicio</a></li>
+                        <li><a href="#" data-waypoint-to="#">Blog</a></li>
+                        <li><a href="#" data-waypoint-to="#">Productos</a></li>
+                        <li><a href="#" data-waypoint-to="#">Contactanos</a></li>
+
+                    </ul>
+                </div>
+                <div class="column" style="max-width: 300px;">
+                    <p>Enlaces</p>
+                    <ul class="list">
+                        <li><a href="#" data-waypoint-to="#">Centro de ayuda</a></li>
+                        <li><a href="#" data-waypoint-to="#">FAQs</a></li>
+                        <li><a href="#" data-waypoint-to="#">productos</a></li>
+                        <li><a href="#" data-waypoint-to="#">Terminos y condiciones</a></li>
+                        <li><a href="#" data-waypoint-to="#">Politicas de privacidad</a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <!--Copyright-->
+            <div class="column" style="height: auto;">
+                <div class="group-md group-middle">
+                    <p class="rights"><span>©&nbsp; </span><span class="copyright-year">2022</span><span>&nbsp;</span><span>Comfort Esthetics</span><span>.&nbsp;</span></p>
+                </div>
+            </div>
+            <!--Redes sociales-->
+            <div class="col" style="margin-top: 16px;">
+                <div class="text-lg-right">
+                    <ul class="group-xl group-middle">
+                        <li>
+                            <a class="icon" href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a class="icon" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a class="icon" href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a class="icon" href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="main.js"></script>
+    
+</body>
+</html>
